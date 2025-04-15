@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shared Tasks on Indian Sign Language Processing</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #0a0a0a;
+      --text-color: #333;
+      --light-gray: #f8f9fa;
+      --border-color: #000000;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      background-color: white;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: var(--primary-color);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-logo {
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-decoration: none;
+      padding: 15px 0;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0;
+    }
+
+    .nav-links a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 0;
+      border-bottom: 0px solid var(--border-color);
+      background-color: white;
+    }
+
+    .header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-text {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .header-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .workshop-title {
+      font-weight: 400;
+      color: var(--text-color);
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 20px;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      text-align: justify;
+    }
+
+    .task {
+      margin-bottom: 4rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border-color);
+      text-align: justify;
+    }
+
+    .task:last-child {
+      border-bottom: none;
+    }
+
+    .task h3 {
+      color: var(--primary-color);
+      font-size: 1.6rem;
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+
+    .video-item {
+      flex: 0 1 300px;
+    }
+
+    video {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border-color);
+    }
+
+    .video-caption {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .translation {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .button-container {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      padding: 8px 16px;
+      background-color: white;
+      color: var(--accent-color);
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      border: 1px solid var(--accent-color);
+      transition: all 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    .section {
+      margin: 4rem 0;
+      text-align: justify;
+      scroll-margin-top: 70px; /* Ensures proper scrolling with sticky nav */
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 2rem;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 12px 16px;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: var(--light-gray);
+      text-align: left;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .resources ul, .timeline ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 1.5rem 0;
+    }
+
+    .resources li, .timeline li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .resources li::before, .timeline li::before {
+      content: "•";
+      color: var(--accent-color);
+      position: absolute;
+      left: 0;
+    }
+
+    .resources a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .resources a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: white;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 4rem;
+    }
+
+    .task-description {
+      text-align: justify;
+    }
+
+    .bold {
+      font-weight: 600;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+    }
+
+    @media (max-width: 767px) {
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .video-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .video-item {
+        width: 100%;
+        max-width: 320px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .workshop-title {
+        font-size: 1rem;
+      }
+      
+      header {
+        padding: 1rem 0;
+      }
+      
+      .header-image {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">IJCNLP-AACL 2025 Workshop</a>
+      <button class="mobile-menu-btn">☰</button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#overview">Tasks Overview</a></li>
+        <li><a href="#tasks">Shared Tasks</a></li>
+        <li><a href="#participate">Call to Participate</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#submission">Submission</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home">
+    <div class="header-container">
+      <div class="header-text">
+        <h1>Shared Tasks on Indian Sign Language Processing</h1>
+        <p class="workshop-title">IJCNLP-AACL 2025 Low Resource Workshop</p>
+      </div>
+      <img src="./assets/iSign_thumbnail-1.png" alt="Indian Sign Language Workshop" class="header-image" />
+    </div>
+  </header>
+  
+  <main>
+    <div class="intro">
+      <p>Across the world, more than 430 million people are estimated to have disabling hearing loss, 
+        according to the World Health Organization (WHO). For many in the Deaf and Hard of Hearing (DHH)
+        community, sign languages are the primary means of communication. These languages are rich, 
+        visual-gestural systems with their own grammar and structure—distinct from spoken or written 
+        languages. However, accessibility barriers remain widespread due to a lack of sign language 
+        interpreters and assistive technologies in education, employment, healthcare, and public 
+        services.</p>
+        
+      <p>In India the situation is especially critical. With an estimated 63 million 
+        DHH individuals, India has one of the largest Deaf communities in the world. Yet, there 
+        are only about 300 certified Indian Sign Language (ISL) interpreters, according to the 
+        Indian Sign Language Research and Training Center (ISLRTC). ISL is widely used across 
+        the Indian subcontinent and is even ranked among the most commonly used sign languages 
+        globally. Still, it remains severely under-resourced in terms of 
+        technology and research.</p>
+        
+      <p>While other sign languages such as American Sign Language (ASL) and German Sign Language (DGS)
+         have benefited from well-annotated datasets and benchmark challenges, Indian Sign Language 
+         lacks standard datasets, and research benchmarks, limiting the development
+         of robust AI-based solutions.</p>
+        
+      <p>With recent advances in Artificial Intelligence (AI) and Natural Language Processing (NLP), 
+        there is a strong opportunity to build technologies that can translate, recognize, and understand
+        sign languages. However, processing sign languages comes with unique challenges, such as 
+        interpreting multi-modal inputs (videos, gestures, facial expressions), modeling complex 
+        spatial-temporal dynamics, and coping with data scarcity.</p>
+        
+      <p>To address these challenges and promote innovation in this important area
+        we are organizing three shared tasks in Indian Sign Language (ISL) processing under the 
+        IJCNLP-AACL 2025 Workshop.</p>
+    </div>
+
+    <!-- SHARED TASKS OVERVIEW TABLE -->
+    <div id="overview" class="section">
+      <h2>Shared Tasks Overview</h2>
+      <p>We are organizing three shared tasks focused on different aspects of ISL processing: 
+        <strong>Translation</strong>, <strong>Recognition</strong>, and <strong>Word Presence Prediction</strong>.
+        All tasks are built upon publicly released datasets created to address the data 
+        scarcity for ISL.</p>
+      <table>
+        <tr>
+          <th>Task #</th>
+          <th>Name</th>
+          <th>Focus</th>
+          <th>Dataset</th>
+        </tr>
+        <tr>
+          <td>Task 1</td>
+          <td>ISL to English Translation</td>
+          <td>Sentence-level translation from ISL videos/pose to English</td>
+          <td><a href="https://huggingface.co/datasets/Exploration-Lab/iSign">iSign</a></td>
+        </tr>
+        <tr>
+          <td>Task 2</td>
+          <td>Word/Gloss Recognition</td>
+          <td>Isolated sign recognition at the word level</td>
+          <td><a href="https://huggingface.co/datasets/Exploration-Lab/CISLR">CISLR</a></td>
+        </tr>
+        <tr>
+          <td>Task 3</td>
+          <td>Word Presence Prediction</td>
+          <td>Detecting presence of a word in a signed sentence</td>
+          <td><a href="https://huggingface.co/datasets/Exploration-Lab/iSign/viewer/word-presence-dataset_v1.1?views%5B%5D=word_presence_dataset_v11">Word Presence Dataset</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- TASKS -->
+    <div id="tasks" class="section">
+      <h2>Shared Tasks Details</h2>
+      <div class="task">
+        <h3>🧠 Task 1: ISL to English Translation</h3>
+        <div class="task-description">
+          <p>The Objective of this shared task is to Translate Indian Sign Language (ISL) video/pose into English text. 
+          </p>
+          
+          <p> This task tackles the <strong>core challenge of sign language translation</strong>, converting <strong>visual-gestural input</strong> into grammatically correct and semantically equivalent English sentences. It's essential for applications like <strong>sign-enabled chatbots, video interpreters, and inclusive digital interfaces</strong>.</p>
+          
+          <p><strong>Dataset:</strong> The task uses the <strong>iSign dataset</strong>, a large-scale resource consisting of <strong>118,000 video-sentence pairs</strong> annotated in English. </p>
+
+        </div>
+        <div class="video-container">
+          <div class="video-item">
+            <video autoplay muted loop playsinline> 
+             <source src="./assets/The_ban_would_mean_she_can't_compete_in_any_national_or_other_domestic_events.mp4" type="video/mp4" />
+            </video>
+            <div class="translation"><strong>English Translation:</strong> "The ban would mean she can't compete 
+              in any national or other domestic events"</div>
+          </div>
+        </div>
+        <div class="task-description">
+          <p><strong>Evaluation:</strong>  Evaluation will be done using standard metrics for translation 
+          like <strong>BLEU</strong>, <strong>chrF</strong>, and <strong>ROUGE</strong>.</p>
+        </div>
+        <div class="button-container">
+          <a href="https://huggingface.co/datasets/Exploration-Lab/iSign" class="button" target="_blank">iSign Dataset</a>
+          <a href="#" class="button" target="_blank">CodaLab (Coming Soon)</a>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>🤚 Task 2: Word/Gloss Recognition</h3>
+        <div class="task-description">
+          <p>The Objective of this shared task is to recognize isolated signs (words or glosses) from short video clips.</p>
+          
+          <p>This task addresses the core recognition problem in sign language processing. 
+            Recognizing individual signs correctly is crucial for dictionary building, sign lookup tools, and fine-grained 
+              annotation pipelines</strong>.</p>
+          
+          <p><strong>Dataset:</strong> The <strong>CISLR dataset</strong> (Corpus for Indian Sign Language Recognition) 
+            is used for this task. It contains:</p>
+          <ul>
+            <li><strong>7,050</strong> video clips</li>
+            <li>Each video corresponds to a <strong> ISL word</strong></li>
+            <li>Videos are captured with clear labeling for isolated signs</li>
+          </ul>
+        </div>
+        <div class="video-container">
+          <div class="video-item">
+            <video autoplay muted loop playsinline>
+              <source src="./assets/National_(Sign_2).mp4" type="video/mp4" />
+            </video>
+            <div class="translation"><strong>Label:</strong> "National"</div>
+          </div>
+        </div>
+        <div class="task-description">
+          <p><strong>Evaluation:</strong> Evaluated will be done using classification accuracy and top-k accuracy
+             on a held-out test set.</p>
+        </div>
+        <div class="button-container">
+          <a href="https://huggingface.co/datasets/Exploration-Lab/CISLR" class="button" target="_blank">CISLR Dataset</a>
+          <a href="#" class="button" target="_blank">CodaLab (Coming Soon)</a>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>🔍 Task 3: Word Presence Prediction</h3>
+        <div class="task-description">
+          <p>The Objective of this shared task is predict whether a word is present in the sign video or not.Given a full ISL sentence (in video form) and a query word, determine whether that 
+            word is present in the sentence.</p>
+          
+          <p>This shared task is useful for sign search engines, 
+            and query-based video retrieval. Unlike recognition or translation, this task evaluates understanding without 
+              requiring generation.</p>
+          
+          <p><strong>Dataset:</strong> The task uses the <strong>Word Presence Dataset</strong> proposed in iSign Paper.</p>
+          <ul>
+            <li><strong>1,543</strong> sentence-video and query-word pairs</li>
+            <li>Each pair is labeled to indicate whether the <strong>word appears in the signed sentence</strong></li>
+          </ul>
+        </div>
+        <div class="video-container">
+          <div class="video-item">
+            <video autoplay muted loop playsinline>
+              <source src="./assets/National_(Sign_2).mp4" type="video/mp4" />
+            </video>
+            <div class="video-caption">Query Word: "National"</div>
+          </div>
+          <div class="video-item">
+            <video autoplay muted loop playsinline>
+              <source src="./assets/The_ban_would_mean_she_can't_compete_in_any_national_or_other_domestic_events.mp4" type="video/mp4" />
+            </video>
+            <div class="video-caption">Sentence Video: "The ban would mean she can't compete in any 
+              national or other domestic events" contains: "National"</div>
+          </div>
+        </div>
+        <div class="task-description">
+          <p><strong>Evaluation:</strong> This is a <strong>binary classification task</strong>. Submissions will be evaluated using metrics such as <strong>accuracy</strong>, <strong>precision</strong>, <strong>recall</strong>, and <strong>F1 score</strong>.</p>
+        </div>
+        <div class="button-container">
+          <a href="https://huggingface.co/datasets/Exploration-Lab/iSign/viewer/word-presence-dataset_v1.1?views%5B%5D=word_presence_dataset_v11" class="button" target="_blank">Word Presence Dataset</a>
+          <a href="#" class="button" target="_blank">CodaLab (Coming Soon)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALL TO PARTICIPATE -->
+    <div id="participate" class="section">
+      <h2>🤝 Call to Participate</h2>
+      <p>We invite researchers, students, and developers working in <strong>computer vision</strong>, <strong>natural language processing</strong>, <strong>speech and gesture technology</strong>, or <strong>any related area</strong> to participate in these tasks. By contributing to these shared tasks, you help build the future of inclusive and accessible communication for millions of ISL users.</p>
+      <p>For any questions or collaboration ideas, feel free to contact the organizers.</p>
+      <ul>
+        <li><strong>Ashutosh Modi</strong> (ashutoshm@cse.iitk.ac.in)  </li>
+        <li><strong>Abhinav Joshi </strong> (ajoshi@cse.iitk.ac.in) </li>
+        <li><strong>Sanjeet Singh </strong> (sanjeet@cse.iitk.ac.in) </li>
+      </ul>
+    </div>
+
+    <div id="timeline" class="section timeline">
+      <h2>Evaluation & Timeline (Tentative)</h2>
+      <p><Strong> Important Dates </Strong></p>
+      <ul>
+        <li><strong>Start date : </strong> : May 25, 2025 </li>
+        <li><strong>Training Phase : </strong> : May 25, 2025 to August 25, 2025 </li>
+        <li><strong>Testing Phase :</strong> August 25, 2025 to September 5, 2025</li>
+        <li><strong>Paper Submission Deadline:</strong> September 29, 2025 </li>
+        <li><strong>ARR commitment deadline:</strong> October 27, 2025 </li>
+        <li><strong>Notification of acceptance:</strong> November 3, 2025 </li>
+        <li><strong>Camera-ready papers due:</strong> November 11, 2025 </li>
+        <li><strong>Proceeding due:</strong> December 1, 2025 </li>
+      </ul>
+    </div>
+
+    <div id="submission" class="section">
+      <h2>Submission Instructions</h2>
+      <p> Two types of submissions are invited: full (long) papers (8 pages) and short papers (4 pages).
+        Please follow these formatting guidelines: <a href="https://github.com/acl-org/acl-style-files">ACL Style</a>. Please note that the review process is double-blind.
+      </p>
+      <p>
+        Final versions of accepted papers will be given one additional page of content (up to 9 pages for long papers, up to 5 pages for short papers) to address reviewers comments.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 IJCNLP-AACL Workshop on Low-Resource NLP | All rights reserved.
+  </footer>
+  
+  <a href="#home" class="back-to-top" id="back-to-top">↑</a>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
