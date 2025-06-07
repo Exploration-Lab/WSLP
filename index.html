@@ -1,114 +1,79 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth selection:bg-black selection:text-white">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IJCNLP-AACL 2025 SLT4LRL Workshop</title>
-  <meta name="description" content="IJCNLP-AACL 2025 Workshop on Sign Language Translation for Low-Resource Languages">
-  <meta name="keywords" content="IJCNLP, AACL, SLT4LRL, Sign Language, ISL, Workshop, NLP, AI, Accessibility">
-  <meta name="author" content="IJCNLP-AACL 2025 SLT4LRL Organizers">
+  <meta name="description" content="Workshop on Sign Language Translation for Low-Resource Languages">
+  <meta name="keywords" content="IJCNLP, AACL, SLT4LRL, Sign Language, ISL, NLP, AI">
+  <meta name="author" content="SLT4LRL Organizers">
   <link rel="canonical" href="https://ijcnlp-aacl-2025-slt4lrl.github.io">
   
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ijcnlp-aacl-2025-slt4lrl.github.io">
-  <meta property="og:title" content="IJCNLP-AACL 2025 SLT4LRL Workshop">
-  <meta property="og:description" content="IJCNLP-AACL 2025 Workshop on Sign Language Translation for Low-Resource Languages">
-  <meta property="og:image" content="/assets/banner.png">
-  <meta property="og:image:alt" content="IJCNLP-AACL 2025 Workshop Banner">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="IJCNLP-AACL 2025 SLT4LRL Workshop">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://ijcnlp-aacl-2025-slt4lrl.github.io">
-  <meta name="twitter:title" content="IJCNLP-AACL 2025 SLT4LRL Workshop">
-  <meta name="twitter:description" content="IJCNLP-AACL 2025 Workshop on Sign Language Translation for Low-Resource Languages">
-  <meta name="twitter:image" content="/assets/banner.png">
-  
   <!-- Favicons -->
-  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon.ico">
   <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
   
-  <!-- SEO -->
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
-  <meta name="theme-color" content="#ffffff">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <!-- Fonts and Styles -->
-  <link rel="preconnect" href="https://rsms.me/">
+  <!-- Fonts -->
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   
-  <!-- Inline Styles (adapted from BlackboxNLP and your subpage) -->
+  <!-- Simplified Styles -->
   <style>
     :root {
-      --primary-color: #2c3e50;
-      --accent-color: #0a0a0a;
-      --text-color: #333;
-      --light-gray: #f8f9fa;
-      --border-color: #000000;
+      --primary-color: #2c3e50; /* Dark blue */
+      --accent-color: #0a0a0a;  /* Black */
+      --text-color: #333;       /* Dark gray */
+      --light-gray: #f8f9fa;    /* Light gray background */
+      --border-color: #000;     /* Black border */
     }
     body {
-      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
       color: var(--text-color);
-      background-color: var(--light-gray);
+      background: var(--light-gray);
       line-height: 1.6;
-      scroll-behavior: smooth;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
-    .fixed-nav {
+    .nav {
       position: fixed;
       top: 1rem;
-      inset-x: 0;
+      width: 100%;
       z-index: 50;
     }
     .nav-container {
-      max-width: 4xl;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    .nav-inner {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 1rem;
       background: white;
       border: 1px solid #e2e8f0;
-      backdrop-filter: blur(10px);
-      border-radius: 9999px;
+      border-radius: 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 0.75rem 1rem;
+      align-items: center;
     }
     .nav-logo {
       display: flex;
       align-items: center;
+      font-size: 1.2rem;
       font-weight: bold;
-      font-size: 1.25rem;
       color: var(--primary-color);
       text-decoration: none;
     }
     .nav-logo img {
       height: 2rem;
-      margin-right: 1rem;
+      margin-right: 0.5rem;
     }
     .nav-links {
       display: flex;
-      gap: 0.75rem;
-      font-size: 0.875rem;
-      color: #4a5568;
+      gap: 0.5rem;
     }
     .nav-links a {
       color: var(--text-color);
       text-decoration: none;
-      padding: 0.5rem 0.75rem;
-      transition: color 0.2s ease;
+      padding: 0.5rem;
     }
     .nav-links a:hover {
       color: var(--primary-color);
@@ -117,14 +82,13 @@
       display: none;
       background: none;
       border: none;
-      color: var(--text-color);
       font-size: 1.5rem;
       cursor: pointer;
     }
     main {
-      max-width: 4xl;
-      margin: 0 auto;
-      padding: 5rem 2rem 3rem;
+      max-width: 1000px;
+      margin: auto;
+      padding: 5rem 1rem 2rem;
       flex: 1;
     }
     .hero {
@@ -132,58 +96,51 @@
       padding: 2rem 0;
     }
     .hero img {
-      max-width: 16rem;
-      margin-bottom: 2rem;
+      max-width: 12rem;
     }
     h1 {
-      font-size: 3rem;
-      font-weight: normal;
+      font-size: 2.5rem;
       color: var(--primary-color);
-      margin: 0 0 1.5rem;
+      margin: 0.5rem 0;
     }
     h2 {
-      font-size: 2rem;
-      font-weight: 300;
+      font-size: 1.8rem;
       color: var(--primary-color);
       margin: 2rem 0 1rem;
     }
     h3 {
-      font-size: 1.5rem;
-      font-weight: 400;
+      font-size: 1.3rem;
       color: var(--text-color);
     }
     .buttons {
       display: flex;
       gap: 1rem;
       justify-content: center;
-      margin: 1.5rem 0;
+      margin: 1rem 0;
     }
     .button {
       padding: 0.5rem 1rem;
       border: 2px solid var(--accent-color);
-      border-radius: 9999px;
+      border-radius: 2rem;
       background: var(--accent-color);
       color: white;
       text-decoration: none;
-      font-size: 0.875rem;
-      transition: all 0.2s ease;
+      font-size: 0.9rem;
     }
     .button:hover {
       background: transparent;
       color: var(--accent-color);
     }
     .section {
-      margin: 3rem 0;
-      text-align: justify;
+      margin: 2rem 0;
     }
     ul {
       list-style: disc;
-      margin: 1rem 0;
       padding-left: 1.5rem;
     }
     .organizers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
     }
     .organizer-card {
@@ -195,8 +152,8 @@
       align-items: center;
     }
     .organizer-card img {
-      width: 5rem;
-      height: 5rem;
+      width: 4rem;
+      height: 4rem;
       border-radius: 50%;
       margin-right: 1rem;
     }
@@ -205,20 +162,19 @@
       border-top: 1px solid var(--border-color);
       padding: 2rem;
       text-align: center;
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       color: #666;
     }
     @media (max-width: 767px) {
-      .nav-inner {
+      .nav-container {
         flex-direction: column;
         align-items: flex-start;
-        border-radius: 0.75rem;
+        border-radius: 0.5rem;
       }
       .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
-        padding: 1rem 0;
       }
       .nav-links.active {
         display: flex;
@@ -230,35 +186,31 @@
         top: 1rem;
       }
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <!-- Navigation -->
-  <div class="fixed-nav">
+  <div class="nav">
     <div class="nav-container">
-      <div x-data="{ open: false }" class="nav-inner">
+      <div x-data="{ open: false }">
         <a href="/" class="nav-logo">
+          <!-- Logo Image: /DATA2/sanjeet/ISL-Shared-Task/assets/logo.svg -->
           <img src="/assets/logo.svg" alt="SLT4LRL Logo">
           <span>IJCNLP-AACL 2025 SLT4LRL</span>
         </a>
-        <button @click="open = !open" class="mobile-menu-btn">
-          <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-            <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
+        <button @click="open = !open" class="mobile-menu-btn">☰</button>
         <nav x-bind:class="{ 'active': open }" class="nav-links">
           <a href="/#home">Home</a>
           <a href="/#news">News</a>
           <a href="/#dates">Important Dates</a>
           <a href="/#program">Program</a>
-          <a href="/shared-task">Shared Task</a>
+          <a href="/shared-task/index.html">Shared Task</a>
           <a href="/#organizers">Organizers</a>
         </nav>
       </div>
@@ -267,91 +219,74 @@
 
   <!-- Main Content -->
   <main>
-    <section class="hero">
+    <section class="hero" id="home">
+      <!-- Logo Image: /DATA2/sanjeet/ISL-Shared-Task/assets/logo.svg -->
       <img src="/assets/logo.svg" alt="SLT4LRL Logo">
       <h1>IJCNLP-AACL 2025 SLT4LRL Workshop</h1>
       <h3>Sign Language Translation for Low-Resource Languages</h3>
-      <span class="text-gray-500">Co-located with <a href="https://2025.ijcnlp-aacl.org" target="_blank" class="underline hover:text-gray-600">IJCNLP-AACL 2025</a> in Abu Dhabi, UAE on November 20th, 2025</span>
+      <span class="text-gray-500">Co-located with <a href="https://2025.ijcnlp-aacl.org" target="_blank" class="underline">IJCNLP-AACL 2025</a> in Abu Dhabi, UAE on November 20th, 2025</span>
       <div class="buttons">
-        <a href="/shared-task" class="button">Shared Task</a>
+        <a href="/shared-task/index.html" class="button">Shared Task</a>
         <a href="#dates" class="button">Important Dates</a>
       </div>
     </section>
 
     <div class="section">
-      <p>With over 430 million people worldwide experiencing disabling hearing loss, sign languages are vital for the Deaf and Hard of Hearing community. In India, with an estimated 63 million DHH individuals, Indian Sign Language (ISL) is a primary communication mode yet lacks sufficient technological support. This workshop aims to advance AI and NLP technologies for sign language processing, focusing on low-resource languages like ISL, to enhance accessibility in education, healthcare, and public services.</p>
-      <p>We invite researchers, students, and developers to contribute to our shared tasks and collaborate on building inclusive technologies for sign language users.</p>
+      <p>Over 430 million people worldwide have disabling hearing loss, and sign languages are essential for the Deaf and Hard of Hearing community. In India, with 63 million DHH individuals, Indian Sign Language (ISL) is widely used but lacks technological support. This workshop advances AI and NLP for sign language processing, focusing on low-resource languages like ISL, to improve accessibility in education, healthcare, and public services.</p>
+      <p>Join our shared tasks and help build inclusive technologies for sign language users.</p>
     </div>
 
-    <h2 id="news">📣 News</h2>
+    <h2 id="news">News</h2>
     <ul>
-      <li><strong>May 25th, 2025:</strong> Shared Task details released! Explore the <a href="/shared-task" class="underline text-blue-400 hover:text-gray-600">Shared Task page</a> for more information.</li>
-      <li><strong>June 1st, 2025:</strong> Call for Papers announced. Stay tuned for submission details.</li>
+      <li><strong>May 25, 2025:</strong> Shared Task details released! Visit the <a href="/shared-task/index.html" class="underline text-blue-400">Shared Task page</a>.</li>
+      <li><strong>June 1, 2025:</strong> Call for Papers announced. Details coming soon.</li>
     </ul>
 
-    <h2 id="dates">🗓️ Important Dates</h2>
+    <h2 id="dates">Important Dates</h2>
     <p><strong>Shared Task</strong></p>
     <ul>
-      <li><strong>May 25th, 2025:</strong> Start date</li>
-      <li><strong>May 25th - August 25th, 2025:</strong> Training Phase</li>
-      <li><strong>August 25th - September 5th, 2025:</strong> Testing Phase</li>
-      <li><strong>September 29th, 2025:</strong> Paper Submission Deadline</li>
+      <li><strong>May 25, 2025:</strong> Start Date</li>
+      <li><strong>May 25 - August 25, 2025:</strong> Training Phase</li>
+      <li><strong>August 25 - September 5, 2025:</strong> Testing Phase</li>
+      <li><strong>September 29, 2025:</strong> Paper Submission Deadline</li>
     </ul>
     <p><strong>Regular Papers</strong></p>
     <ul>
-      <li><strong>September 29th, 2025:</strong> Paper Submission Deadline</li>
-      <li><strong>October 27th, 2025:</strong> ARR Commitment Deadline</li>
-      <li><strong>November 3rd, 2025:</strong> Notification of Acceptance</li>
-      <li><strong>November 11th, 2025:</strong> Camera-Ready Papers Due</li>
+      <li><strong>September 29, 2025:</strong> Paper Submission Deadline</li>
+      <li><strong>October 27, 2025:</strong> ARR Commitment Deadline</li>
+      <li><strong>November 3, 2025:</strong> Notification of Acceptance</li>
+      <li><strong>November 11, 2025:</strong> Camera-Ready Papers Due</li>
     </ul>
-    <p><strong>November 20th, 2025:</strong> Workshop Date</p>
-    <p><em>All deadlines are 11:59PM UTC-12:00 (“Anywhere on Earth”).</em></p>
+    <p><strong>November 20, 2025:</strong> Workshop Date</p>
+    <p><em>All deadlines are 11:59PM UTC-12:00.</em></p>
 
     <h2 id="program">Program</h2>
-    <p class="text-gray-600">Program under construction, stay tuned!</p>
-
-    <h2 id="faq">FAQ</h2>
-    <div x-data="{ openItem: null }">
-      <ul class="list-none bg-white rounded-3xl divide-y divide-gray-200 shadow-sm">
-        <li>
-          <button class="w-full p-6 text-left" @click="openItem !== 0 ? openItem = 0 : openItem = null" type="button">
-            <div class="flex items-center justify-between">
-              <h3 class="text-lg font-medium text-black pr-4">Are dual submissions allowed?</h3>
-              <svg class="ml-4 h-5 w-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20" x-bind:class="{'rotate-180': openItem === 0}">
-                <path d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" fill-rule="evenodd"></path>
-              </svg>
-            </div>
-          </button>
-          <div class="overflow-hidden transition-all duration-300" x-bind:class="openItem === 0 ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'" x-ref="container0" x-bind:style="openItem === 0 ? 'max-height: ' + $refs.container0.scrollHeight + 'px' : ''">
-            <div class="px-6 pb-6 text-gray-600">
-              <p>Yes, dual submissions are allowed if the other venue permits it. If accepted to our archival track, you must withdraw from the other venue. Dual submissions with IJCNLP-AACL main conference are not allowed.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <p class="text-gray-600">Program details coming soon!</p>
 
     <h2 id="organizers">Organizers</h2>
     <p>Contact us at <a href="mailto:ashutoshm@cse.iitk.ac.in" class="underline">ashutoshm@cse.iitk.ac.in</a>.</p>
     <div class="organizers-grid">
       <div class="organizer-card">
+        <!-- Image: /DATA2/sanjeet/ISL-Shared-Task/assets/ashutosh.jpg -->
         <img src="/assets/ashutosh.jpg" alt="Ashutosh Modi">
         <div>
-          <a href="https://cse.iitk.ac.in/users/ashutoshm/" class="underline"><h4 class="text-xl font-semibold">Ashutosh Modi</h4></a>
+          <a href="https://cse.iitk.ac.in/users/ashutoshm/" class="underline"><h4 class="text-lg">Ashutosh Modi</h4></a>
           <p class="text-sm text-gray-400">Associate Professor, IIT Kanpur</p>
         </div>
       </div>
       <div class="organizer-card">
+        <!-- Image: /DATA2/sanjeet/ISL-Shared-Task/assets/abhinav.jpg -->
         <img src="/assets/abhinav.jpg" alt="Abhinav Joshi">
         <div>
-          <a href="https://cse.iitk.ac.in/users/ajoshi/" class="underline"><h4 class="text-xl font-semibold">Abhinav Joshi</h4></a>
+          <a href="https://cse.iitk.ac.in/users/ajoshi/" class="underline"><h4 class="text-lg">Abhinav Joshi</h4></a>
           <p class="text-sm text-gray-400">Researcher, IIT Kanpur</p>
         </div>
       </div>
       <div class="organizer-card">
+        <!-- Image: /DATA2/sanjeet/ISL-Shared-Task/assets/sanjeet.jpg -->
         <img src="/assets/sanjeet.jpg" alt="Sanjeet Singh">
         <div>
-          <a href="https://cse.iitk.ac.in/users/sanjeet/" class="underline"><h4 class="text-xl font-semibold">Sanjeet Singh</h4></a>
+          <a href="https://cse.iitk.ac.in/users/sanjeet/" class="underline"><h4 class="text-lg">Sanjeet Singh</h4></a>
           <p class="text-sm text-gray-400">Researcher, IIT Kanpur</p>
         </div>
       </div>
@@ -360,23 +295,24 @@
 
   <!-- Footer -->
   <footer>
-    <div class="max-w-4xl mx-auto px-8 py-12">
+    <div class="max-w-1000px mx-auto px-4 py-8">
       <hr>
-      <div class="flex flex-col gap-4 pt-8">
+      <div class="flex flex-col gap-4 pt-4">
         <a href="/" class="nav-logo">
+          <!-- Logo Image: /DATA2/sanjeet/ISL-Shared-Task/assets/logo.svg -->
           <img src="/assets/logo.svg" alt="SLT4LRL Logo">
           <span>IJCNLP-AACL 2025 SLT4LRL</span>
         </a>
-        <ul class="flex flex-col md:flex-row gap-6 text-xs text-gray-500 uppercase">
+        <ul class="flex flex-col md:flex-row gap-4 text-xs text-gray-500">
           <li><a href="/#news" class="hover:text-black">News</a></li>
           <li><a href="/#dates" class="hover:text-black">Important Dates</a></li>
           <li><a href="/#program" class="hover:text-black">Program</a></li>
-          <li><a href="/shared-task" class="hover:text-black">Shared Task</a></li>
+          <li><a href="/shared-task/index.html" class="hover:text-black">Shared Task</a></li>
           <li><a href="/#organizers" class="hover:text-black">Organizers</a></li>
         </ul>
       </div>
-      <p class="text-sm text-black pt-8">
-        © 2025 IJCNLP-AACL Workshop on Low-Resource NLP | Hosted on GitHub Pages.
+      <p class="text-sm text-black pt-4">
+        © 2025 IJCNLP-AACL Workshop on Low-Resource NLP
       </p>
     </div>
   </footer>
