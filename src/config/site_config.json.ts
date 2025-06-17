@@ -119,14 +119,14 @@ const site_config: SiteConfig = {
         link: "mailto:ashutoshm@cse.iitk.ac.in"
     },
 
-    {
-        image_path: "/SLT/Xing-Wang.jpg",
-        name: "Xing Wang",
-        affiliation: "Tencent, China",
-        description:'',
-        // "Senior Researcher at Tencent, specializing in neural and statistical machine translation, large language models, sign language translation, and biomedical NLP.",
-        link: "mailto:xingwsuda@gmail.com"
-    },
+    // {
+    //     image_path: "/SLT/Xing-Wang.jpg",
+    //     name: "Xing Wang",
+    //     affiliation: "Tencent, China",
+    //     description:'',
+    //     // "Senior Researcher at Tencent, specializing in neural and statistical machine translation, large language models, sign language translation, and biomedical NLP.",
+    //     link: "mailto:xingwsuda@gmail.com"
+    // },
     {
         image_path: "/SLT/Hao-Zhou.jpg",
         name: "Hao Zhou",
