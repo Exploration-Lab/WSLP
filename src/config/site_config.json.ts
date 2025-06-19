@@ -61,7 +61,7 @@ const site_config: SiteConfig = {
     x_handle: "@WSLP",
     keywords: "WSLP, IJCNLP - AACL, NLP, Workshop, XAI,  Language Models, Sign Language Translation, Low-Resource Languages, Shared Task, Sign Language Processing, Multimodal Machine Learning, Indian Sign Language",
     authors: "WSLP 2025 Organizers",
-    logo_path: "/SLT/logo1.png",
+    logo_path: "/WSLP/logo1.png",
     name: "WSLP 2025",
     description: "Workshop on Sign Language Processing (WSLP)",
     main_conf: "IJCNLP - AACL 2025",
@@ -70,16 +70,16 @@ const site_config: SiteConfig = {
     date: "December 20th, 2025",
     nav_title: "WSLP",
     nav_items: [
-        { name: "Call for Papers", href: "/SLT/call" },
-        { name: "Shared Task", href: "/SLT/task" },
-        // { name: "News", href: "/SLT/#news" },
-        { name: "Program", href: "/SLT/#program" },
-        { name: "Organizers", href: "/SLT/#organizers" },
-        { name: "Important Dates", href: "/SLT/#news" },
+        { name: "Call for Papers", href: "/WSLP/call" },
+        { name: "Shared Task", href: "/WSLP/task" },
+        // { name: "News", href: "/WSLP/#news" },
+        { name: "Program", href: "/WSLP/#program" },
+        { name: "Organizers", href: "/WSLP/#organizers" },
+        { name: "Important Dates", href: "/WSLP/#news" },
     ],
     buttons: [
-        { name: "Call for Papers", href: "/SLT/call" },
-        { name: "Shared Task", href: "/SLT/task" },
+        { name: "Call for Papers", href: "/WSLP/call" },
+        { name: "Shared Task", href: "/WSLP/task" },
     ],
     // anthology_link: "https://aclanthology.org/venues/WSLP/",
     // email_link: "isign.benchmark@gmail.com",
@@ -94,7 +94,7 @@ const site_config: SiteConfig = {
         organizers: [
 
     {
-        image_path: "/SLT/Mohammed-Hasanuzzaman.jpeg",
+        image_path: "/WSLP/Mohammed-Hasanuzzaman.jpeg",
         name: "Mohammed Hasanuzzaman",
         affiliation: "Queen’s University Belfast, UK & ADAPT Centre, MTU, Ireland",
         description: '',
@@ -102,7 +102,7 @@ const site_config: SiteConfig = {
         link: "https://mohammedhasanuzzaman.github.io/"
     },
     {
-        image_path: "/SLT/Facundo-Quiroga.png",
+        image_path: "/WSLP/Facundo-Quiroga.png",
         name: "Facundo Manuel Quiroga",
         affiliation: "Universidad Nacional de La Plata (UNLP), Argentina",
         description: '',
@@ -110,7 +110,7 @@ const site_config: SiteConfig = {
         link: "https://facundoq.github.io/"
     },
         {
-        image_path: "/SLT/Ashutosh-New.jpg",
+        image_path: "/WSLP/Ashutosh-New.jpg",
         name: "Ashutosh Modi",
         affiliation: "Indian Institute of Technology Kanpur (IIT Kanpur), India",
         description: '',
@@ -119,7 +119,7 @@ const site_config: SiteConfig = {
     },
 
     // {
-    //     image_path: "/SLT/Xing-Wang.jpg",
+    //     image_path: "/WSLP/Xing-Wang.jpg",
     //     name: "Xing Wang",
     //     affiliation: "Tencent, China",
     //     description:'',
@@ -127,7 +127,7 @@ const site_config: SiteConfig = {
     //     link: "mailto:xingwsuda@gmail.com"
     // },
     {
-        image_path: "/SLT/Hao-Zhou.jpg",
+        image_path: "/WSLP/Hao-Zhou.jpg",
         name: "Hao Zhou",
         affiliation: "Baidu VIS, China",
         description:'',
@@ -135,7 +135,7 @@ const site_config: SiteConfig = {
         link: "mailto:zhouh156@mail.ustc.edu.cn"
     },
     {
-        image_path: "/SLT/Sabyasachi-Kamila.jpg",
+        image_path: "/WSLP/Sabyasachi-Kamila.jpg",
         name: "Sabyasachi Kamila",
         affiliation: "Vellore Institute of Technology Vellore, India",
         description:'',
@@ -143,7 +143,7 @@ const site_config: SiteConfig = {
         link: "mailto:sabyasachi.kamila@gmail.com"
     },
     {
-        image_path: "/SLT/Keren-Artiaga.jpg",
+        image_path: "/WSLP/Keren-Artiaga.jpg",
         name: "Keren Artiaga",
         affiliation: "ADAPT Centre, MTU, Cork, Ireland",
         description:'',
@@ -151,7 +151,7 @@ const site_config: SiteConfig = {
         link: "http://www.linkedin.com/in/keren-artiaga-249132228"
     },
     {
-        image_path: "/SLT/Abhinav-Joshi.png",
+        image_path: "/WSLP/Abhinav-Joshi.png",
         name: "Abhinav Joshi",
         affiliation: "Ph.D. Student, Indian Institute of Technology Kanpur (IIT Kanpur), India",
         description:'',
@@ -159,7 +159,7 @@ const site_config: SiteConfig = {
         link: "https://www.cse.iitk.ac.in/users/ajoshi/"
     },
     {
-        image_path: "/SLT/Sanjeet-Singh.jpg",
+        image_path: "/WSLP/Sanjeet-Singh.jpg",
         name: "Sanjeet Singh",
         affiliation: "Ph.D. Student, Indian Institute of Technology Kanpur (IIT Kanpur), India",
         description:'',
