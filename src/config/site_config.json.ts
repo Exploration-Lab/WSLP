@@ -59,17 +59,17 @@ interface SiteConfig {
 const site_config: SiteConfig = {
     website_url: "https://exploration-lab.github.io/",
     banner_path: "2025/banner.png",
-    x_handle: "@SLT4LRL",
-    keywords: "SLT4LRL, IJCNLP - AACL, NLP, Workshop, XAI,  Language Models, Sign Language Translation, Low-Resource Languages, Shared Task, Sign Language Processing, Multimodal Machine Learning, Indian Sign Language",
-    authors: "SLT4LRL 2025 Organizers",
+    x_handle: "@WSLP",
+    keywords: "WSLP, IJCNLP - AACL, NLP, Workshop, XAI,  Language Models, Sign Language Translation, Low-Resource Languages, Shared Task, Sign Language Processing, Multimodal Machine Learning, Indian Sign Language",
+    authors: "WSLP 2025 Organizers",
     logo_path: "/SLT/logo1.png",
-    name: "SLT4LRL 2025",
-    description: "Workshop on Sign Language Translation for Low-Resource Languages (SLT4LRL)",
+    name: "WSLP 2025",
+    description: "Workshop on Sign Language Translation for Low-Resource Languages (WSLP)",
     main_conf: "IJCNLP - AACL 2025",
     main_conf_link: "https://www.afnlp.org/conferences/ijcnlp2025/",
     location: "IIT Bombay, Mumbai, India",
     date: "December 20th, 2025",
-    nav_title: "SLT4LRL",
+    nav_title: "WSLP",
     nav_items: [
         { name: "Call for Papers", href: "/SLT/call" },
         { name: "Shared Task", href: "/SLT/task" },
@@ -82,12 +82,12 @@ const site_config: SiteConfig = {
         { name: "Call for Papers", href: "/SLT/call" },
         { name: "Shared Task", href: "/SLT/task" },
     ],
-    anthology_link: "https://aclanthology.org/venues/SLT4LRL/",
+    anthology_link: "https://aclanthology.org/venues/WSLP/",
     email_link: "isign.benchmark@gmail.com",
-    youtube_link: "https://www.youtube.com/@SLT4LRL",
-    x_link: "https://twitter.com/SLT4LRL",
-    github_link: "https://github.com/SLT4LRL",
-    bluesky_link: "https://bsky.app/profile/SLT4LRL.bsky.social",
+    youtube_link: "https://www.youtube.com/@WSLP",
+    x_link: "https://twitter.com/WSLP",
+    github_link: "https://github.com/WSLP",
+    bluesky_link: "https://bsky.app/profile/WSLP.bsky.social",
     program_events: [],
     invited_speakers: [],
     panelists: [],
@@ -172,7 +172,7 @@ const site_config: SiteConfig = {
     faq_items: [
         {
             question: "Are dual submissions allowed?",
-            answer: "Yes, dual submissions are allowed if the other venue also allows dual submissions. If your submission is accepted to the archival track of SLT4LRL, you will have to withdraw your submission to the other venue. Dual submissions to SLT4LRL and IJCNLP - AACL (including ARR) are not allowed."
+            answer: "Yes, dual submissions are allowed if the other venue also allows dual submissions. If your submission is accepted to the archival track of WSLP, you will have to withdraw your submission to the other venue. Dual submissions to WSLP and IJCNLP - AACL (including ARR) are not allowed."
         },
     ]
 };
