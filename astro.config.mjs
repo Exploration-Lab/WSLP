@@ -11,6 +11,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://exploration-lab.github.io",
-  base: 'SLT',
+  base: 'WSLP',
   integrations: [mdx(), sitemap()]
 });
