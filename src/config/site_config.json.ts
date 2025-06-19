@@ -14,12 +14,12 @@ interface SiteConfig {
     nav_title: string;
     nav_items: Array<{ name: string; href: string }>;
     buttons: Array<{ name: string; href: string }>;
-    // anthology_link: string;
-    // email_link: string;
-    // youtube_link: string;
-    // x_link: string;
-    // github_link: string;
-    // bluesky_link: string;
+    anthology_link: string;
+    email_link: string;
+    youtube_link: string;
+    x_link: string;
+    github_link: string;
+    bluesky_link: string;
     program_events: Array<{
         start_time: string;
         end_time: string;
@@ -81,12 +81,12 @@ const site_config: SiteConfig = {
         { name: "Call for Papers", href: "/WSLP/call" },
         { name: "Shared Task", href: "/WSLP/task" },
     ],
-    // anthology_link: "https://aclanthology.org/venues/WSLP/",
-    // email_link: "isign.benchmark@gmail.com",
-    // youtube_link: "https://www.youtube.com/@WSLP",
-    // x_link: "https://twitter.com/WSLP",
-    // github_link: "https://github.com/WSLP",
-    // bluesky_link: "https://bsky.app/profile/WSLP.bsky.social",
+    anthology_link: "https://aclanthology.org/venues/WSLP/",
+    email_link: "isign.benchmark@gmail.com",
+    youtube_link: "https://www.youtube.com/@WSLP",
+    x_link: "https://twitter.com/WSLP",
+    github_link: "https://github.com/WSLP",
+    bluesky_link: "https://bsky.app/profile/WSLP.bsky.social",
     program_events: [],
     invited_speakers: [],
     panelists: [],
@@ -118,14 +118,6 @@ const site_config: SiteConfig = {
         link: "mailto:ashutoshm@cse.iitk.ac.in"
     },
 
-    // {
-    //     image_path: "/WSLP/Xing-Wang.jpg",
-    //     name: "Xing Wang",
-    //     affiliation: "Tencent, China",
-    //     description:'',
-    //     // "Senior Researcher at Tencent, specializing in neural and statistical machine translation, large language models, sign language translation, and biomedical NLP.",
-    //     link: "mailto:xingwsuda@gmail.com"
-    // },
     {
         image_path: "/WSLP/Hao-Zhou.jpg",
         name: "Hao Zhou",
