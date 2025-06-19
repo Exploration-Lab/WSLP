@@ -55,7 +55,6 @@ interface SiteConfig {
         answer: string;
     }>;
 }
-
 const site_config: SiteConfig = {
     website_url: "https://exploration-lab.github.io/",
     banner_path: "2025/banner.png",

@@ -7,6 +7,9 @@
   font-family: Inter, sans-serif;
 
 }
+.center-organizer {
+  text-align: center;
+}
 @supports (font-variation-settings: normal) {
   /* Use variable font if supported */
   :root {
@@ -28,9 +31,4 @@ tr {
 th, td {
   padding: 15px;
   min-width:150px;
-}
-th, td {
-  padding: 15px;
-  min-width: 150px;
-  text-align: center; /* Add this line */
 }
