@@ -7,9 +7,6 @@
   font-family: Inter, sans-serif;
 
 }
-.center-organizer {
-  text-align: center;
-}
 @supports (font-variation-settings: normal) {
   /* Use variable font if supported */
   :root {

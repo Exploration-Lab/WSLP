@@ -109,22 +109,13 @@ const site_config: SiteConfig = {
         // "Professor and full-time researcher at Instituto de Investigación en Informática LIDI, Facultad de Informática, UNLP. Over the last decade, he has focused on innovative approaches to Sign Language Translation, particularly Argentinian Sign Language (LSA), covering dataset collection, model development, data augmentation, and interpretability analysis.",
         link: "https://facundoq.github.io/"
     },
-        {
+    {
         image_path: "/WSLP/Ashutosh-New.jpg",
         name: "Ashutosh Modi",
         affiliation: "Indian Institute of Technology Kanpur (IIT Kanpur), India",
         description: '',
         // "Associate Professor at IIT Kanpur. Specializes in Indian Sign Language Processing, emotion recognition in multimodal environments, NLP applications in legal contexts, and commonsense reasoning in LLMs.",
-        link: "mailto:ashutoshm@cse.iitk.ac.in"
-    },
-
-    {
-        image_path: "/WSLP/Hao-Zhou.jpg",
-        name: "Hao Zhou",
-        affiliation: "Baidu VIS, China",
-        description:'',
-        // "Researcher at Baidu VIS, specializing in sign language processing and cross-modal understanding.",
-        link: "mailto:zhouh156@mail.ustc.edu.cn"
+        link: "https://ashutosh-modi.github.io/"
     },
     {
         image_path: "/WSLP/Sabyasachi-Kamila.jpg",

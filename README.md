@@ -1,4 +1,4 @@
-# SLT4LRL Website
+# WSLP Website
 
 ## Folder Structure
 
