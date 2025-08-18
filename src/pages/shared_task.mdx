@@ -29,11 +29,11 @@ WSLP 2025 invites participants to three **Shared Tasks** addressing key challeng
 
 ## 🔍 Shared Tasks Overview
 
-| Task # | Name                        | Focus                                            | Dataset                                                                 |
-|--------|-----------------------------|--------------------------------------------------|-------------------------------------------------------------------------|
-| Task 1 | ISL to English Translation   | Sentence-level translation from ISL videos/pose to English | [iSign](https://huggingface.co/datasets/Exploration-Lab/iSign)          |
-| Task 2 | Word/Gloss Recognition      | Isolated sign recognition at the word level       | [CISLR](https://huggingface.co/datasets/Exploration-Lab/CISLR)          |
-| Task 3 | Word Presence Prediction    | Detecting presence of a word in a signed sentence | [Word Presence Dataset](https://huggingface.co/datasets/Exploration-Lab/iSign/viewer/word-presence-dataset_v1.1?views%5B%5D=word_presence_dataset_v11) |
+| Task # | Name                        | Focus                                            | Public Dataset                                                                 | Task dataset
+|--------|-----------------------------|--------------------------------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| Task 1 | ISL to English Translation   | Sentence-level translation from ISL videos/pose to English | [iSign](https://huggingface.co/datasets/Exploration-Lab/iSign)          | [Translation Dataset](https://huggingface.co/datasets/Exploration-Lab/WSLP-AACL-2025/tree/main/Shared_task_MT) |
+| Task 2 | Word/Gloss Recognition      | Isolated sign recognition at the word level       | [CISLR](https://huggingface.co/datasets/Exploration-Lab/CISLR)          | [word Recognition Dataset](https://huggingface.co/datasets/Exploration-Lab/WSLP-AACL-2025/tree/main/Shared_task_WR) |
+| Task 3 | Word Presence Prediction    | Detecting presence of a word in a signed sentence | [Word Presence Dataset](https://huggingface.co/datasets/Exploration-Lab/iSign/viewer/word-presence-dataset_v1.1?views%5B%5D=word_presence_dataset_v11) | [Word Presence Prediction Dataset](https://huggingface.co/datasets/Exploration-Lab/WSLP-AACL-2025/tree/main/Shared_task_WPP) |
 
 ## 📋 Shared Tasks Details
 
@@ -43,7 +43,7 @@ WSLP 2025 invites participants to three **Shared Tasks** addressing key challeng
 
 - **Challenges:** Visual-linguistic grounding, grammar, gesture ambiguity
 - **Use Cases:** Sign-enabled chatbots, video interpreters, accessible interfaces
-- **Dataset:** [iSign](https://huggingface.co/datasets/Exploration-Lab/iSign) (118,000 video-sentence pairs)
+- **Dataset:** Public Dataset[iSign](https://huggingface.co/datasets/Exploration-Lab/iSign) (118,000 video-sentence pairs) , Task validation and Test dataset [Translation Dataset](https://huggingface.co/datasets/Exploration-Lab/WSLP-AACL-2025/tree/main/Shared_task_MT) 
 - **Metrics:** BLEU, ROUGE, chrF
 - **Input ➝ Output:** ISL video/pose ➝ English sentence
 
@@ -65,11 +65,11 @@ WSLP 2025 invites participants to three **Shared Tasks** addressing key challeng
 </div>
 
 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '1.5rem' }}>
-  <a href="https://huggingface.co/datasets/Exploration-Lab/iSign" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
-    iSign Dataset
+  <a href="https://huggingface.co/datasets/Exploration-Lab/WSLP-AACL-2025/tree/main/Shared_task_MT" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
+    Dataset
   </a>
-  <a href="#" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
-    CodaLab (Coming Soon)
+  <a href="https://www.codabench.org/competitions/10118/?secret_key=7dd5b72d-6b95-4c97-9529-6205ae0dce17" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
+    Codabench
   </a>
 </div>
 
@@ -81,7 +81,7 @@ WSLP 2025 invites participants to three **Shared Tasks** addressing key challeng
 
 - **Challenges:** Sign variability, subtle motion, similar gestures
 - **Use Cases:** Dictionary building, lookup tools, annotation
-- **Dataset:** [CISLR](https://huggingface.co/datasets/Exploration-Lab/CISLR) (7,050 labeled video clips)
+- **Dataset:** Dataset  [word Recognition Dataset] (https://huggingface.co/datasets/Exploration-Lab/WSLP-AACL-2025/tree/main/Shared_task_WR)
 - **Metrics:** Accuracy, Top-K Accuracy
 - **Input ➝ Output:** Video clip ➝ Word label
 
@@ -103,11 +103,11 @@ WSLP 2025 invites participants to three **Shared Tasks** addressing key challeng
 </div>
 
 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '1.5rem' }}>
-  <a href="https://huggingface.co/datasets/Exploration-Lab/CISLR" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
-    CISLR Dataset
+  <a href="https://huggingface.co/datasets/Exploration-Lab/WSLP-AACL-2025/tree/main/Shared_task_WR" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
+    Dataset
   </a>
-  <a href="#" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
-    CodaLab (Coming Soon)
+  <a href="https://www.codabench.org/competitions/10135/?secret_key=71e01e84-774c-414e-96d4-81ca55698b3e" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
+    Codabench
   </a>
 </div>
 
@@ -119,7 +119,7 @@ WSLP 2025 invites participants to three **Shared Tasks** addressing key challeng
 
 - **Challenges:** Sign spotting, context alignment
 - **Use Cases:** Query-based video retrieval, sign search
-- **Dataset:** [Word Presence Dataset](https://huggingface.co/datasets/Exploration-Lab/iSign/viewer/word-presence-dataset_v1.1?views%5B%5D=word_presence_dataset_v11) (1,543 video-query pairs)
+- **Dataset:** [Word Presence Dataset](https://huggingface.co/datasets/Exploration-Lab/WSLP-AACL-2025/tree/main/Shared_task_WPP)
 - **Metrics:** Accuracy, Precision, Recall, F1
 - **Input ➝ Output:** (Video, Word) ➝ Present / Not Present
 
@@ -155,11 +155,11 @@ WSLP 2025 invites participants to three **Shared Tasks** addressing key challeng
 </div>
 
 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '1.5rem' }}>
-  <a href="https://huggingface.co/datasets/Exploration-Lab/iSign/viewer/word-presence-dataset_v1.1?views%5B%5D=word_presence_dataset_v11" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
+  <a href="https://huggingface.co/datasets/Exploration-Lab/WSLP-AACL-2025/tree/main/Shared_task_WPP" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
     Word Presence Dataset
   </a>
-  <a href="#" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
-    CodaLab (Coming Soon)
+  <a href="https://www.codabench.org/competitions/10066/?secret_key=10b4792f-4959-4ad5-b4e2-965c84659b5c" target="_blank" style={{ padding: '8px 16px', backgroundColor: 'white', color: '#0a0a0a', textDecoration: 'none', borderRadius: '4px', fontSize: '0.9rem', border: '1px solid #0a0a0a', transition: 'all 0.2s ease' }}>
+    Codabench
   </a>
 </div>
 
@@ -169,8 +169,8 @@ WSLP 2025 invites participants to three **Shared Tasks** addressing key challeng
 
 | Event                        | Date                          |
 |------------------------------|-------------------------------|
-| 🟢 Start Date               | July 20, 2025                  |
-| 📚 Training Phase           | July 20 – October 5, 2025      |
+| 🟢 Start Date               | August 15, 2025                  |
+| 📚 Training Phase           | August 15 – October 5, 2025      |
 | 🧪 Testing Phase            | October 5 – October 15, 2025 |
 | 📄 Paper Submission Deadline| October 25, 2025            |
 | 📬 Notification of Acceptance| November 3, 2025              |
@@ -187,19 +187,12 @@ We invite **researchers**, **students**, and **developers** in **computer vision
 
 ## 📦 Submission Guidelines
 
-- **Platform:** CodaLab (links coming soon)
+- **Platform:** Codabench
 - **Team Size:** Max 4 members (TBD)
 - **Format:** To be released with dataset
 - **Requirements:** Output on test set + short documentation
 - **Paper Submission:** Full (8 pages) or short (4 pages) papers, following [ACL Style](https://github.com/acl-org/acl-style-files). Double-blind review. Accepted papers get +1 page for revisions.
 
-## 🏆 Awards & Prizes
-
-| 🏅 Rank | Prize (INR) |
-|---------|-------------|
-| 🥇 1st  | XXX INR     |
-| 🥈 2nd  | XXX INR     |
-| 🥉 3rd  | XXX INR     |
 
 > ✅ **Get ready** to build impactful AI tools for the Deaf community. Stay tuned for dataset releases and CodaLab instructions!
 
