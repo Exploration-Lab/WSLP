@@ -68,7 +68,7 @@ const site_config: SiteConfig = {
     main_conf: "IJCNLP - AACL 2025",
     main_conf_link: "https://www.afnlp.org/conferences/ijcnlp2025/",
     location: "IIT Bombay, Mumbai, India",
-    date: "December 20th, 2025",
+    date: "December 24th, 2025",
     nav_title: "WSLP",
     nav_items: [
         { name: "Call for Papers", href: "/WSLP/call" },
