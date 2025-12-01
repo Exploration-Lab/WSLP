@@ -31,6 +31,7 @@ interface SiteConfig {
         name: string;
         affiliation: string;
         description: string;
+        title: string;
         link: string;
     }>;
     panelists: Array<{
@@ -88,7 +89,22 @@ const site_config: SiteConfig = {
     github_link: "https://github.com/WSLP",
     // bluesky_link: "https://bsky.app/profile/WSLP.bsky.social",
     program_events: [],
-    invited_speakers: [],
+    invited_speakers: [{
+    image_path: "/WSLP/amit.jpg",        // ← replace with your actual file
+    name: "Dr. Amit Moryossef",
+    affiliation: "Nagish (formerly founder of sign.mt), Israel",
+    description: "Researcher and entrepreneur in sign-language technology. He completed his Ph.D. at Bar-Ilan University and a postdoc at the University of Zurich. He founded sign.mt, a real-time sign-language translation platform that was recently acquired by Nagish, where he currently leads research. His work has received multiple best-paper awards at ACL and EMNLP.",
+    title: "The Future of Sign Language Translation is Transcription",
+    link: "https://biu-nlp.github.io/people/amit_moryossef"   // or any link you prefer
+  },
+  {
+    image_path: "/WSLP/Andesha.jpeg",       // ← replace with your actual file
+    name: "Andesha Mangla",
+    affiliation: "Indian Sign Language Research and Training Center (ISLRTC), India",
+    description: "Assistant Professor of Sign Linguistics at ISLRTC, a national institute promoting Indian Sign Language (ISL). She completed her PhD in Linguistics from Delhi University, focusing on the role of ISL in deaf education. With ~15 years of experience, she trains ISL interpreters and deaf teachers, and develops ISL resources including the ISL Dictionary and NCERT textbook translations.",
+    title: "ISLRTC’s Contributions to Indian Sign Language and Deaf Education",
+    link: "#"   // replace with actual website if available
+  }],
     panelists: [],
     sponsors: [],
         organizers: [
