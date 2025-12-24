@@ -99,7 +99,7 @@ const site_config: SiteConfig = {
   },
   {
     image_path: "/WSLP/Andesha.jpeg",       // ← replace with your actual file
-    name: "Andesha Mangla",
+    name: "Dr. Andesha Mangla",
     affiliation: "Indian Sign Language Research and Training Center (ISLRTC), India",
     description: "Assistant Professor of Sign Linguistics at ISLRTC, a national institute promoting Indian Sign Language (ISL). She completed her PhD in Linguistics from Delhi University, focusing on the role of ISL in deaf education. With ~15 years of experience, she trains ISL interpreters and deaf teachers, and develops ISL resources including the ISL Dictionary and NCERT textbook translations.",
     title: "ISLRTC’s Contributions to Indian Sign Language and Deaf Education",
